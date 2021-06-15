@@ -1,4 +1,4 @@
-name: OWASP ZAP Baseline Scan
+name: zapfull-security-scan
 on:
   push:
     branches: [ main ]
@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:     
-    - name: OWASP ZAP Baseline Scan on Testasp.com
-      uses: zaproxy/action-baseline@v0.2.0
+    - name: OWASP ZAP Full Scan
+      uses: zaproxy/action-full-scan@v0.2.0
       with:
-        target: "http://testasp.vulnweb.com/"
+        target: "https://www.demoblaze.com"
