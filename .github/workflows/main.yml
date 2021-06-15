@@ -8,6 +8,6 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.4.0
         with: 
-          token: ${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}
+          token: ${{ secrets.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}}
           docker_name: 'owasp/zap2docker-stable'
           target: 'https://www.demoblaze.com'
