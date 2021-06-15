@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:     
-    - name: OWASP ZAP Baseline Scan on Testasp.com
-      uses: zaproxy/action-baseline@v0.2.0
+    - name: OWASP ZAP Baseline Scan
+      uses: zaproxy/action-baseline@v0.4.0
       with:
         target: "http://testasp.vulnweb.com/"
