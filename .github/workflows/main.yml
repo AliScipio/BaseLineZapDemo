@@ -1,14 +1,15 @@
-on:
-  schedule:
-    # Runs every day At 01:00.
-    - cron:  '0 1 * * *'
+on: [push]
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-    name: Scan ZAP website
+    name: Scan the webapplication
     steps:
-      - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+      - name: DemoBaseLine
         with:
-          target: 'https://wpportfolio.net/website-portfolio/'
+          ref: main
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.2.0
+        with:
+          docker_name: "owasp/zap2docker-stable"
+          target: "https://www.opencart.com/"
