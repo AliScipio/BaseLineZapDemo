@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: main
-      - name: ZAP Scan
+      - name: ZAP Scan Baseline Videotron
         uses: zaproxy/action-baseline@v0.4.0
         with:
           target: 'https://www.videotron.com/'
