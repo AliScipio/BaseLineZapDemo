@@ -10,7 +10,7 @@ jobs:
         with:
           ref: main
       - name: ZAP Scan Baseline Videotron
-        uses: zaproxy/action-baseline@v0.4.0
+        uses: zaproxy/action-baseline@v0.2.0
         with:
           target: 'https://www.videotron.com/'
 
